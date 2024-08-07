@@ -4,7 +4,7 @@ from pydantic import BaseModel
 import requests
 import os
 
-API_KEY = "your-api-key"  # Replace with your actual API key
+API_KEY = os.getenv("API_KEY")
 API_KEY_NAME = "access_token"
 api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=False)
 
