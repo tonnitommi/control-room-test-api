@@ -14,7 +14,7 @@ def get_api_key(api_key_header: str = Depends(api_key_header)):
     if api_key_header == API_KEY:
         return api_key_header
     else:
-        raise HTTPException(status_code=403, detail="Could not validate credentials")
+        raise HTTPException(status_code=403, detail="Could not validate credentials.")
 
 class CountryRequest(BaseModel):
     country: str
